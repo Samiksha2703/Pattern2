@@ -8,6 +8,8 @@ Last_Name="^([[:upper:]]){3}[[:alpha:]]*$"
 
 E_MAIL_ID="^[a-zA-Z0-9]+([.+-][0-9a-zA-Z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,}([.][a-zA-Z]{2,}){0,1}$"
 
+Mob_No="91[[:blank:]][0-9]{10}$"
+
 echo "Enter your first name"
 
 read first_name
@@ -43,6 +45,21 @@ echo "Enter your email id"
 read email
 
 if [[ $email =~ $E_MAIL_ID ]]
+then
+
+echo "Valid"
+
+else
+
+echo "Invalid"
+
+fi
+
+echo "Enter your mobile number"
+
+read mob
+
+if [[ $mob =~ $Mob_No ]]
 then
 
 echo "Valid"

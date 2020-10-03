@@ -6,6 +6,8 @@ First_Name="^([[:upper:]]){3}[[:alpha:]]*$"
 
 Last_Name="^([[:upper:]]){3}[[:alpha:]]*$"
 
+E_MAIL_ID="^[a-zA-Z0-9]+([.+-][0-9a-zA-Z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,}([.][a-zA-Z]{2,}){0,1}$"
+
 echo "Enter your first name"
 
 read first_name
@@ -36,3 +38,17 @@ echo "Invalid"
 
 fi
 
+echo "Enter your email id"
+
+read email
+
+if [[ $email =~ $E_MAIL_ID ]]
+then
+
+echo "Valid"
+
+else
+
+echo "Invalid"
+
+fi

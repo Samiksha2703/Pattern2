@@ -75,7 +75,7 @@ echo "Enter password"
 
 read pass
 
-if [[ ${#pass} -gt 8 && $pass =~ [[:upper:]] ]]
+if [[ ${#pass} -gt 8 && $pass =~ [[:upper:]] && $pass =~ [[:digit:]] ]]
 then
 
 	echo "Valid"

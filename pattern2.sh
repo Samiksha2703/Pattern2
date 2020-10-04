@@ -75,12 +75,12 @@ echo "Enter password"
 
 read pass
 
-if [[ ${#pass} -gt 8 ]]
+if [[ ${#pass} -gt 8 && $pass =~ [[:upper:]] ]]
 then
 
 	echo "Valid"
 
-else 	
+else
 	echo "Invalid"
 fi
 

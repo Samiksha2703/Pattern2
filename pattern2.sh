@@ -10,6 +10,7 @@ E_MAIL_ID="^[a-zA-Z0-9]+([.+-][0-9a-zA-Z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,}([.][a-zA-
 
 Mob_No="91[[:blank:]][0-9]{10}$"
 
+
 echo "Enter your first name"
 
 read first_name
@@ -17,26 +18,26 @@ read first_name
 if [[ $first_name =~ $First_Name ]]
 then
 
-echo "Valid"
+	echo "Valid"
 
 else
 
-echo "Invalid"
+	echo "Invalid"
 
 fi
 
-echo "Enter your last name"
+	echo "Enter your last name"
 
 read last_name
 
 if [[ $last_name =~ $Last_Name ]]
 then
 
-echo "Valid"
+	echo "Valid"
 
 else
 
-echo "Invalid"
+	echo "Invalid"
 
 fi
 
@@ -47,11 +48,11 @@ read email
 if [[ $email =~ $E_MAIL_ID ]]
 then
 
-echo "Valid"
+	echo "Valid"
 
 else
 
-echo "Invalid"
+	echo "Invalid"
 
 fi
 
@@ -62,10 +63,24 @@ read mob
 if [[ $mob =~ $Mob_No ]]
 then
 
-echo "Valid"
+	echo "Valid"
 
 else
 
-echo "Invalid"
+	echo "Invalid"
 
 fi
+
+echo "Enter password"
+
+read pass
+
+if [[ ${#pass} -gt 8 ]]
+then
+
+	echo "Valid"
+
+else 	
+	echo "Invalid"
+fi
+

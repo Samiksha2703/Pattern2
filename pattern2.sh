@@ -10,7 +10,6 @@ E_MAIL_ID="^[a-zA-Z0-9]+([.+-][0-9a-zA-Z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,}([.][a-zA-
 
 Mob_No="91[[:blank:]][0-9]{10}$"
 
-
 echo "Enter your first name"
 
 read first_name
@@ -75,9 +74,11 @@ echo "Enter password"
 
 read pass
 
-if [[ ${#pass} -gt 8 && $pass =~ [[:upper:]] && $pass =~ [[:digit:]] ]]
-then
+special=$(($(tr -d '[[:alnum:]]' <<< $pass | wc -m)-1))
 
+
+if [[ ${#pass} -gt 8 && $pass =~ [[:upper:]] && $pass =~ [[:digit:]] && $special -eq 1 ]]
+then
 	echo "Valid"
 
 else
